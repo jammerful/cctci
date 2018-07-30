@@ -57,6 +57,15 @@ object binarytree {
   }
 
   assert(BinaryTree.isBalanced(BinaryTree(Leaf(2), 1, Leaf(3))) == true)
+  /*
+          1
+         / \
+        2   3
+             \
+              4
+               \
+                5
+   */
   val testTree = BinaryTree(Leaf(2), 1, BinaryTree(Empty, 3, BinaryTree(Empty, 4, Leaf(5))))
   assert(BinaryTree.isBalanced(testTree) == false)
   BinaryTree.inOrderTraversal(testTree, println)
